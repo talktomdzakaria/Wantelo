@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wantelo | Online Shopping in Bangladesh – In Sah Allah, Coming Soon </title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Wantelo.com – A new online shopping destination in Bangladesh. Exclusive deals, trendy products, and smart shopping are coming soon. Stay tuned!">
+  <meta name="keywords" content="Wantelo, Wantelo Bangladesh, Wantelo.com, online shopping BD, e-commerce Bangladesh, shop online, buy online, BD deals, BD offers, shopping Bangladesh">
+  <meta name="author" content="Wantelo Team">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Wantelo | Online Shopping in Bangladesh – Coming Soon">
+  <meta property="og:description" content="Something exciting is cooking at Wantelo.com. Stay tuned for Bangladesh’s new online shopping experience.">
+  <meta property="og:url" content="https://wantelo.com">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://wantelo.com/preview.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Wantelo | Coming Soon in Bangladesh">
+  <meta name="twitter:description" content="Wantelo.com – A brand new online shopping experience in Bangladesh is on its way.">
+  <meta name="twitter:image" content="https://wantelo.com/preview.jpg">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      color: #333;
+      text-align: center;
+    }
+    .container {
+      background: #fff;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      max-width: 600px;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #ff6363;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    .loader {
+      border: 6px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 6px solid #ff6363;
+      width: 60px;
+      height: 60px;
+      animation: spin 1.5s linear infinite;
+      margin: 0 auto 20px;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    footer {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+    .lang-toggle {
+      margin-top: 20px;
+    }
+    .lang-toggle button {
+      padding: 8px 16px;
+      margin: 5px;
+      border: none;
+      border-radius: 8px;
+      background: #ff6363;
+      color: #fff;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .lang-toggle button:hover {
+      background: #ff4040;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="loader"></div>
+    <!-- English Content -->
+    <div id="en" class="lang">
+      <h1>Something Good is Cooking 🍳</h1>
+      <p>Welcome to <strong>Wantelo.com</strong> – Bangladesh’s upcoming online shopping platform.  
+      We are preparing exclusive deals, trendy collections, and a seamless shopping experience for you.  
+      Stay tuned for the official launch in Bangladesh!</p>
+    </div>
+
+    <!-- Bangla Content -->
+    <div id="bn" class="lang" style="display: none;">
+      <h1> ইন শাহ আল্লাহ, ভালো কিছু আসছে 🍳</h1>
+      <p>স্বাগতম <strong>Wantelo.com</strong>-এ – বাংলাদেশের নতুন অনলাইন শপিং প্ল্যাটফর্ম।  
+      আমরা প্রস্তুত করছি এক্সক্লুসিভ অফার, ট্রেন্ডি কালেকশন এবং সহজ শপিং এক্সপেরিয়েন্স।  
+      অফিসিয়াল লঞ্চের জন্য অপেক্ষা করুন!</p>
+    </div>
+
+    <!-- Language Switch -->
+    <div class="lang-toggle">
+      <button onclick="showLang('en')">English</button>
+      <button onclick="showLang('bn')">বাংলা</button>
+    </div>
+
+    <footer>© <span id="year"></span> Wantelo.com | All Rights Reserved</footer>
+  </div>
+
+  <script>
+    function showLang(lang) {
+      document.querySelectorAll('.lang').forEach(el => el.style.display = 'none');
+      document.getElementById(lang).style.display = 'block';
+    }
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
