@@ -12,10 +12,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
+    /* Body & Gradient Animation */
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #4facfe, #8e44ad); /* Blue → Purple */
+      background: linear-gradient(-45deg, #4facfe, #8e44ad, #43e97b, #f2709c);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -23,34 +26,42 @@
       color: #333;
     }
 
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
     .card {
-      background: #fff;
+      background: rgba(255, 255, 255, 0.95);
       padding: 2rem 3rem;
       border-radius: 20px;
-      box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+      box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.2);
       text-align: center;
       max-width: 600px;
-      animation: fadeIn 1.2s ease-in-out;
+      animation: fadeIn 1.5s ease forwards;
     }
 
     @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(20px);}
+      from {opacity: 0; transform: translateY(30px);}
       to {opacity: 1; transform: translateY(0);}
     }
 
+    /* Loader animation */
     .loader {
       display: flex;
       justify-content: center;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
 
     .dot {
-      width: 15px;
-      height: 15px;
-      margin: 0 5px;
-      background: #27ae60; /* Green */
+      width: 18px;
+      height: 18px;
+      margin: 0 6px;
+      background: #27ae60;
       border-radius: 50%;
       animation: bounce 0.6s infinite alternate;
+      box-shadow: 0 0 8px #27ae60;
     }
 
     .dot:nth-child(2) { animation-delay: 0.2s; }
@@ -58,34 +69,53 @@
 
     @keyframes bounce {
       from { transform: translateY(0); }
-      to { transform: translateY(-15px); }
+      to { transform: translateY(-20px); }
     }
 
+    /* Heading animation */
     h1 {
-      font-size: 1.8rem;
+      font-size: 2rem;
       margin-bottom: 1rem;
       color: #2c3e50;
+      background: linear-gradient(90deg, #ff6a00, #ee0979);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: textGlow 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes textGlow {
+      from { text-shadow: 0 0 5px #ff6a00; }
+      to { text-shadow: 0 0 20px #ee0979; }
     }
 
     p {
       font-size: 1rem;
-      line-height: 1.5;
+      line-height: 1.6;
       color: #555;
+      margin-bottom: 20px;
+      animation: fadeText 2s ease forwards;
+    }
+
+    @keyframes fadeText {
+      from {opacity: 0;}
+      to {opacity: 1;}
     }
 
     button {
       margin-top: 20px;
-      padding: 10px 20px;
+      padding: 12px 25px;
       border: none;
-      border-radius: 25px;
+      border-radius: 30px;
       background: #2980b9;
       color: #fff;
       font-size: 16px;
       cursor: pointer;
-      transition: 0.3s;
+      transition: all 0.3s ease;
     }
 
     button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 15px #2980b9;
       background: #3498db;
     }
   </style>
@@ -100,18 +130,14 @@
 
     <!-- English Content -->
     <div id="en" class="lang">
-      <h1>Alhamdulillah, Something Good is Cooking 🍳</h1>
-      <p>Welcome to <strong>Wantelo.com</strong> – Bangladesh’s upcoming online shopping platform.  
-      We are preparing exclusive deals, trendy collections, and a seamless shopping experience for you.  
-      Stay tuned for the official launch in Bangladesh!</p>
+      <h1>Alhamdulillah, Something Good is Cooking</h1>
+      <p>Welcome to <strong>Wantelo.com</strong> – Bangladesh’s upcoming online shopping platform. We are preparing exclusive deals, trendy collections, and a seamless shopping experience for you. Stay tuned for the official launch in Bangladesh!</p>
     </div>
 
     <!-- Bangla Content -->
     <div id="bn" class="lang" style="display: none;">
       <h1>ইন শাহ আল্লাহ, ভালো কিছু আসছে</h1>
-      <p>স্বাগতম <strong>Wantelo.com</strong>-এ – বাংলাদেশের নতুন অনলাইন শপিং প্ল্যাটফর্ম।  
-      আমরা প্রস্তুত করছি এক্সক্লুসিভ অফার, ট্রেন্ডি কালেকশন এবং সহজ শপিং এক্সপেরিয়েন্স।  
-      অফিসিয়াল লঞ্চের জন্য অপেক্ষা করুন!</p>
+      <p>স্বাগতম <strong>Wantelo.com</strong>-এ – বাংলাদেশের নতুন অনলাইন শপিং প্ল্যাটফর্ম। আমরা প্রস্তুত করছি এক্সক্লুসিভ অফার, ট্রেন্ডি কালেকশন এবং সহজ শপিং এক্সপেরিয়েন্স। অফিসিয়াল লঞ্চের জন্য অপেক্ষা করুন!</p>
     </div>
 
     <button onclick="toggleLang()">English | বাংলা</button>
