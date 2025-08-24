@@ -8,11 +8,9 @@
   <meta name="author" content="Wantelo.com" />
   <title>Wantelo.com | Coming Soon</title>
 
-  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
-    /* Body & Gradient Animation */
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
@@ -36,7 +34,7 @@
       background: rgba(255, 255, 255, 0.95);
       padding: 2rem 3rem;
       border-radius: 20px;
-      box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.2);
+      box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
       text-align: center;
       max-width: 600px;
       animation: floatCard 6s ease-in-out infinite;
@@ -44,13 +42,12 @@
 
     @keyframes floatCard {
       0%   { transform: translateY(0px) translateX(0px); }
-      25%  { transform: translateY(-8px) translateX(4px); }
+      25%  { transform: translateY(-5px) translateX(2px); }
       50%  { transform: translateY(0px) translateX(0px); }
-      75%  { transform: translateY(8px) translateX(-4px); }
+      75%  { transform: translateY(5px) translateX(-2px); }
       100% { transform: translateY(0px) translateX(0px); }
     }
 
-    /* Loader animation */
     .loader {
       display: flex;
       justify-content: center;
@@ -58,13 +55,13 @@
     }
 
     .dot {
-      width: 18px;
-      height: 18px;
-      margin: 0 6px;
-      background: #27ae60;
+      width: 12px;
+      height: 12px;
+      margin: 0 4px;
+      background: #555; /* subtle gray */
       border-radius: 50%;
       animation: bounce 0.6s infinite alternate;
-      box-shadow: 0 0 8px #27ae60;
+      opacity: 0.7;
     }
 
     .dot:nth-child(2) { animation-delay: 0.2s; }
@@ -72,24 +69,22 @@
 
     @keyframes bounce {
       from { transform: translateY(0); }
-      to { transform: translateY(-20px); }
+      to { transform: translateY(-10px); }
     }
 
-    /* Heading animation */
     h1 {
       font-size: 2rem;
       margin-bottom: 1rem;
       color: #2c3e50; 
-      text-shadow: 0 0 10px rgba(44, 62, 80, 0.3); 
+      text-shadow: 0 0 5px rgba(44, 62, 80, 0.2);
       animation: textGlow 2s ease-in-out infinite alternate;
     }
 
     @keyframes textGlow {
-      from { text-shadow: 0 0 5px rgba(44,62,80,0.2); }
-      to { text-shadow: 0 0 15px rgba(44,62,80,0.4); }
+      from { text-shadow: 0 0 2px rgba(44,62,80,0.15); }
+      to { text-shadow: 0 0 8px rgba(44,62,80,0.25); }
     }
 
-    /* Paragraph animation */
     p {
       font-size: 1rem;
       line-height: 1.6;
@@ -110,7 +105,7 @@
       margin-top: 20px;
       padding: 12px 25px;
       border: none;
-      border-radius: 30px;
+      border-radius: 25px;
       background: #2980b9;
       color: #fff;
       font-size: 16px;
@@ -119,9 +114,9 @@
     }
 
     button:hover {
-      transform: scale(1.1);
-      box-shadow: 0 0 15px #2980b9;
+      transform: scale(1.05);
       background: #3498db;
+      box-shadow: none; /* no glow */
     }
   </style>
 </head>
@@ -133,15 +128,13 @@
       <div class="dot"></div>
     </div>
 
-    <!-- English Content -->
     <div id="en" class="lang">
       <h1>Alhamdulillah, Something Good is Cooking.</h1>
       <p>Welcome to <strong>Wantelo.com</strong> – Bangladesh’s upcoming online shopping platform. We are preparing exclusive deals, trendy collections, and a seamless shopping experience for you. Stay tuned for the official launch in Bangladesh!</p>
     </div>
 
-    <!-- Bangla Content -->
     <div id="bn" class="lang" style="display: none;">
-      <h1>ইন শাহ আল্লাহ, ভালো কিছু আসছে।</h1>
+      <h1>ইন শাহ আল্লাহ, ভালো কিছু আসছে ।</h1>
       <p>স্বাগতম <strong>Wantelo.com</strong>-এ – বাংলাদেশের নতুন অনলাইন শপিং প্ল্যাটফর্ম। আমরা প্রস্তুত করছি এক্সক্লুসিভ অফার, ট্রেন্ডি কালেকশন এবং সহজ শপিং এক্সপেরিয়েন্স। অফিসিয়াল লঞ্চের জন্য অপেক্ষা করুন!</p>
     </div>
 
